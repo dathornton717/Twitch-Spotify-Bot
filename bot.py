@@ -66,7 +66,7 @@ class Bot(commands.Bot):
                 await ctx.send(self.request_song_try_again_message(command_name, time_left))
 
     @commands.command()
-    async def commandlist(self, ctx: commands.Context):
+    async def command_list(self, ctx: commands.Context):
         await ctx.send(f"Current commands: !currently_playing, !song_request, !random_song_from_artist")
 
     def seconds_to_string(self, timing):
