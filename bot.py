@@ -56,7 +56,7 @@ class Bot(commands.Bot):
             username = ctx.author.name
             time_left = self.user_timings.valid_command_for_user(username, command_name)
             if time_left <= 0:
-                tracks = spotify.search(artist, "", 100)
+                tracks = spotify.search(artist, "", 50)
                 random.shuffle(tracks)
                 track = spotify.queue_first_successful_song(tracks)
                 self.user_timings.update_command_for_user(username, command_name)
